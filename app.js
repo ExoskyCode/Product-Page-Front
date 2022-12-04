@@ -12,7 +12,7 @@ const activeSlide = document.querySelector(".activeSlide");
 slides.forEach((slide) =>
   slide.addEventListener("click", () => {
     activeSlide.src = slide.src;
-    customizationSpan.innerHTML = ""
+    customizationSpan.innerHTML = "";
   })
 );
 
@@ -55,3 +55,42 @@ const mobileNav = document.querySelector(".mobile");
 burgerBtn.addEventListener("click", () => {
   mobileNav.classList.toggle("activeNav");
 });
+
+const slidesSeeMore = Array.from(document.querySelectorAll(".seeMoreSlide"));
+const next = document.querySelector(".next");
+const back = document.querySelector(".back");
+const nbSlideSeeMore = slidesSeeMore.length;
+let countSlides = 0;
+
+function slideSuivante() {
+  slidesSeeMore[countSlides].classList.remove("active-seeMoreSlide");
+  if (countSlides < nbSlideSeeMore - 1) {
+    countSlides++;
+  } else {
+    countSlides = 0;
+  }
+  slidesSeeMore[countSlides].classList.add("active-seeMoreSlide");
+}
+next.addEventListener("click", slideSuivante);
+
+function slidePrecedente() {
+  slidesSeeMore[countSlides].classList.remove("active-seeMoreSlide");
+
+  if (countSlides > 0) {
+    countSlides--;
+  } else {
+    countSlides = nbSlideSeeMore - 1;
+  }
+
+  slidesSeeMore[countSlides].classList.add("active-seeMoreSlide");
+}
+back.addEventListener("click", slidePrecedente);
+
+function keyPress(e) {
+  if (e.keyCode === 37) {
+    slidePrecedente();
+  } else if (e.keyCode === 39) {
+    slideSuivante();
+  }
+}
+document.addEventListener("keydown", keyPress);

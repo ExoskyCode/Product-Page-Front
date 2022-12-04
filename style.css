@@ -58,7 +58,7 @@ a{
     background: #fff;
     width: 100%;
     height: 3px;
-    bottom: 0;
+    bottom: -3px;
     transform-origin: 100% 0;
     transform: scaleX(0);
     transition: transform 0.4s;
@@ -78,9 +78,10 @@ a{
 .container--nav .links--nav .svg .cartNumber{
     color: #fff;
     position: relative;
-    font-size: 18px;
-    top: 12px;
-    left: 45px;
+    font-weight: 600;
+    font-size: 22px;
+    top: 11px;
+    left: 44px;
 }
 .container--nav .links--nav .svg svg{
     cursor: pointer;
@@ -97,7 +98,7 @@ a{
 }
 .main .slides{
     width: 550px;
-    margin-top: 30px;
+    margin-top: 150px;
 }
 .main .slides .customizationSpan{
     position: relative;
@@ -114,7 +115,6 @@ a{
 }
 .main .slides .slide.activeSlide{
     display: block;
-    animation: switchSlide 0.5s ease-in-out;
 }
 .main .slides .bottomSlides{
     display: flex;
@@ -274,10 +274,93 @@ a{
     cursor: pointer;
 }
 
+/* _________________ SEEMORE _________________ */
+
+.seeMoreProducts{
+    margin: 300px 200px 100px 200px;
+}
+.seeMoreProducts h2{
+    font-size: 42px;
+    font-weight: 900;
+}
+.seeMoreProducts .containerSeeMore{
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+}
+.seeMoreProducts .containerSeeMore img{
+    width: 500px;
+    height: 500px;
+    display: none;
+}
+.seeMoreProducts .containerSeeMore img.active-seeMoreSlide{
+    display: block;
+    animation: switchSlide 0.5s ease-in-out;
+}
+@keyframes switchSlide {
+    from{
+        position: relative;
+        top: -100px;
+        opacity: 0;
+    }
+    to{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+.seeMoreProducts .containerSeeMore .arrows-homepage{
+    width: 700px;
+    position: relative;
+    left: -110px;
+    cursor: pointer;
+    top: -300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* _________________ FOOTER _________________ */
+
+.footer{
+    background: #262626;
+    height: 350px;
+    position: relative;
+    top: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .container--footer{
+    height: 300px;
+    width: 100%;
+    height: 100%;
+    margin: 0px 200px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.footer .container--footer h2{
+    font-weight: 900;
+    font-size: 32px;
+    letter-spacing: 1.6px;
+}
+.footer .container--footer p{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
 /* _________________ RESPONSIVE _________________ */
 
+@media screen and (min-width: 1920px) {
+    .main{
+        margin: 0 300px;
+    }
+}
 @media screen and (max-width: 1480px) {
     .main{
+        margin: 0 100px;
+    }
+    .footer .container--footer{
         margin: 0 100px;
     }
 }
@@ -287,6 +370,9 @@ a{
     }
     .main{
         margin: 0 50px;
+    }
+    .seeMoreProducts{
+        margin: 300px 50px;
     }
 }
 @media screen and (max-width: 1180px) {
@@ -300,10 +386,20 @@ a{
         left: 200px;
         top: -10px;
     }
+    .footer .container--footer{
+        margin: 0;
+    }
 }
 @media screen and (max-width: 900px) {
     .container--nav .links--nav{
         margin: -10 10px;
+    }
+    .footer{
+        height: 1100px;
+    }
+    .footer .container--footer{
+        flex-direction: column;
+        text-align: center;
     }
 }
 @media screen and (max-width: 700px) {
@@ -336,6 +432,19 @@ a{
     .mobile a:hover{
         color: var(--mainColor);
     }
+    .seeMoreProducts .containerSeeMore{
+        width: 400px;
+        height: 400px;
+    }
+    .seeMoreProducts .containerSeeMore img{
+        width: 400px;
+        height: 400px;
+    }
+    .seeMoreProducts .containerSeeMore .arrows-homepage{
+        width: 530px;
+        left: -60px;
+        top: -270px;
+    }
 }
 @media screen and (max-width: 550px) {
     .container--nav .links--nav{
@@ -363,6 +472,14 @@ a{
     .main .productInfos .customization input{
         width: 85%;
     }
+    .seeMoreProducts .containerSeeMore .arrows-homepage{
+        width: 400px;
+        left: 0px;
+        top: 30px;
+    }
+    .seeMoreProducts{
+        margin: 300px 0px;
+    }
 }
 @media screen and (max-width: 450px) {
     .main{
@@ -377,5 +494,19 @@ a{
         position: relative;
         left: 15px;
         top: -10px;
+    }
+    .seeMoreProducts .containerSeeMore{
+        width: 300px;
+        height: 300px;
+    }
+    .seeMoreProducts .containerSeeMore img{
+        width: 300px;
+        height: 300px;
+    }
+    .seeMoreProducts .containerSeeMore .arrows-homepage{
+        width: 300px;
+        position: relative;
+        left: 0px;
+        top: 50px;
     }
 }
