@@ -12,7 +12,6 @@ a{
 }
 :root{
     --fontFam: 'Raleway', sans-serif;
-    --mainColor: #3A71FF;
 }
 
 /* _________________ NAV _________________ */
@@ -32,14 +31,14 @@ a{
     height: 100px;
 }
 .container--nav .links--nav{
-    margin: 0px 200px;
+    margin: -10px 200px;
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 .container--nav .links--nav h1{
     font-size: 42px;
-    color: var(--mainColor);
+    color: #fff;
     font-weight: 900;
     letter-spacing: 2px;
 }
@@ -50,8 +49,26 @@ a{
     font-weight: 600;
     font-size: 22px;
 }
+.container--nav .links--nav .linksInside a{
+    position: relative;
+}
+.container--nav .links--nav .linksInside a::before{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+.container--nav .links--nav .linksInside a:hover::before{
+    transform-origin: 0 0;
+    transform: scaleX(1);
+}
 .container--nav .links--nav .linksInside a:hover{
-    color: var(--mainColor);
+    color: #ccc;
 }
 .container--nav .links--nav .svg{
     width: 130px;
@@ -121,8 +138,9 @@ a{
 .main .productInfos .priceHighlight{
     width: 70px;
     height: 40px;
-    background-color: #65da45;
+    background-color: #333;
     margin-top: -30px;
+    color: #fff;
 }
 .main .productInfos .priceHighlight span{
     position: relative;
@@ -217,7 +235,7 @@ a{
     border: none;
     border-radius: 5px;
     position: relative;
-    background: var(--mainColor);
+    background: #333;
     color: #fff;
     font-weight: 600;
     left: 50px;
@@ -249,10 +267,10 @@ a{
     width: 100%;
     padding: 15px 25px;
     font-size: 22px;
-    background-color: #65da45;
+    background-color: #333;
     border: none;
     border-radius: 5px;
-    color: #333;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -265,7 +283,7 @@ a{
 }
 @media screen and (max-width: 1280px) {
     .container--nav .links--nav{
-        margin: 0 50px;
+        margin: -10px 50px;
     }
     .main{
         margin: 0 50px;
@@ -285,7 +303,7 @@ a{
 }
 @media screen and (max-width: 900px) {
     .container--nav .links--nav{
-        margin: 10px;
+        margin: -10 10px;
     }
 }
 @media screen and (max-width: 700px) {
