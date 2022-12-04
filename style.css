@@ -335,7 +335,7 @@ a{
         top: -10px;
     }
     .footer .container--footer{
-        margin: 0;
+        margin: 20;
     }
     .seeMoreProducts .containerSeeMore{
         flex-wrap: wrap;
@@ -353,10 +353,19 @@ a{
         margin: -10 10px;
     }
     .footer{
-        height: 1100px;
+        height: 700px;
     }
     .footer .container--footer{
         flex-direction: column;
+        text-align: center;
+    }
+    .informations{
+        text-align: center;
+    }
+    .services{
+        text-align: center;
+    }
+    .commande{
         text-align: center;
     }
 }
