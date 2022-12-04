@@ -121,7 +121,7 @@ a{
 .main .productInfos .priceHighlight{
     width: 70px;
     height: 40px;
-    background-color: #F2F55C;
+    background-color: #65da45;
     margin-top: -30px;
 }
 .main .productInfos .priceHighlight span{
@@ -249,7 +249,7 @@ a{
     width: 100%;
     padding: 15px 25px;
     font-size: 22px;
-    background-color: #F2F55C;
+    background-color: #65da45;
     border: none;
     border-radius: 5px;
     color: #333;
