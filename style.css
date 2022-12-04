@@ -135,10 +135,11 @@ a{
 .main .productInfos h2{
     font-weight: 900;
     font-size: 42px;
+    color: #232323;
 }
 .main .productInfos .priceHighlight{
-    width: 70px;
-    height: 40px;
+    width: 80px;
+    height: 50px;
     background-color: #9381FF;
     margin-top: -30px;
     color: #fff;
@@ -147,7 +148,7 @@ a{
     position: relative;
     top: 8px;
     left: 10px;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 600;
 }
 .main .productInfos .avis{
@@ -157,8 +158,9 @@ a{
 }
 .main .productInfos .avis .starsRanking{
     font-weight: 700;
-    font-size: 32px;
+    font-size: 22px;
     margin-left: 10px;
+    color: #232323;
 }
 .main .productInfos .avis .voirAvis{
     margin: 5px 0 0 20px;
@@ -179,7 +181,7 @@ a{
 }
 .main .productInfos .productCaption p{
     font-weight: 700;
-    color: #333;
+    color: #232323;
 }
 .main .productInfos .sizeQuantity{
     display: flex;
@@ -194,15 +196,14 @@ a{
     text-align: center;
 }
 .main .productInfos .sizeQuantity .checkbox{
-    width: 20px;
-    height: 20px;
-    border: none;
-    border-radius: 5px;
+    width: 30px;
+    height: 30px;
 }
 .main .productInfos .sizeQuantity .quantity{
     width: 150px;
     display: flex;
     justify-content: space-between;
+    margin-top: 5px;
 }
 .main .productInfos .sizeQuantity .quantity button{
     width: 50px;
@@ -213,6 +214,7 @@ a{
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 .main .productInfos .sizeQuantity .quantity button:hover{
     background-color: #715de4;
@@ -272,7 +274,7 @@ a{
     height: 300px;
     width: 100%;
     height: 100%;
-    margin: 0px 200px;
+    margin: 0px 300px;
     display: flex;
     justify-content: space-between;
     color: #fff;
@@ -309,7 +311,7 @@ a{
         margin: 0 100px;
     }
     .footer .container--footer{
-        margin: 0 100px;
+        margin: 0 200px;
     }
 }
 @media screen and (max-width: 1280px) {
@@ -346,6 +348,9 @@ a{
     }
     .main .productInfos{
         margin-top: 90px;
+    }
+    .footer .container--footer{
+        margin: 0 100px;
     }
 }
 @media screen and (max-width: 900px) {
