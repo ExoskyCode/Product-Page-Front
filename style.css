@@ -344,6 +344,9 @@ a{
         width: 45%;
         margin-bottom: 50px;
     }
+    .main .productInfos{
+        margin-top: 90px;
+    }
 }
 @media screen and (max-width: 900px) {
     .container--nav .links--nav{
